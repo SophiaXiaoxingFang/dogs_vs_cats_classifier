@@ -37,16 +37,14 @@ Run the `preprocessing.py` file, the training and testing data will be processed
 **Step 4: Train the CNN classifier and get the classification result**
 
 Run the `training.py` file, the CNN will be built and trained according to the training data, as in the figure below:
-
-![](output/training_process.jpg)
+![](output/training_process.png)
 
 When the training is finished, 20 images from the testing data-set will be shown with the prediction result of the trained classifier, as shown in the picture below:
-
 ![](output/20_result_samples.jpeg)
 
 When the figure is closed, the `submission_file.csv` will be generated with the classification results (Dog '1' or Cat '0'') of all the images in the **./data/test/** folder.
 
-Noted that if the CNN model has been trained (`dogsvscats-0.001-6conv-basic.model` exits in the current folder), when you run this `training.py` file, the model will not be trained again, and the trained model will be loaded.
+**Note:** if the CNN model has been trained (`dogsvscats-0.001-6conv-basic.model` exits in the current folder), when you run this `training.py` file, the model will not be trained again, and the trained model will be loaded.
 
 **Step 5: Get the images with separated folders**
 
