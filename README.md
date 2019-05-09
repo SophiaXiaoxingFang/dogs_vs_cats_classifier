@@ -61,7 +61,7 @@ When the figure is closed, the `submission_file.csv` will be generated with the 
 **Step 5: Check the training progress using Tensorboard**
 Launch your Command Prompt with \log dir which is located in your current folder, run command `tensorboard --logdir ./ --host=127.0.0.1`, then check out the tensorboard in your browser, as below:
 
-![](output/tensorboard_example.png)
+![](output/tensorboard_example.PNG)
 
 **Step 6: Get the images within separated folders**
 If you are satisfied with the result, run the `get_image_classification_folder.py` file. When the running is finished, you will get two folders (**./result/dogs/**, **./result/cats/**) with the images accordingly.
