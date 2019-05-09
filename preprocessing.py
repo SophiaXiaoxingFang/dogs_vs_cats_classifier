@@ -1,5 +1,6 @@
 
 # Importing the required libraries
+import sys
 import cv2
 import os
 import numpy as np
@@ -24,7 +25,7 @@ def label_img(img):
 
 
 # Processing the training data
-def process_train_data():
+def process_train_data(image_size=IMG_SIZE):
     # Creating an empty list where we should the store the training data
     training_data = []
 
@@ -39,7 +40,7 @@ def process_train_data():
         img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
 
         # resizing the image for processing them in the covnet
-        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
+        img = cv2.resize(img, (image_size, image_size))
 
         # final step-forming the training data list with numpy array of the images
         training_data.append([np.array(img), np.array(label)])
@@ -53,13 +54,13 @@ def process_train_data():
 
 
 # Processing the given test data, similar with the prepossessing of training data expect for labeling
-def process_test_data():
+def process_test_data(image_size=IMG_SIZE):
     testing_data = []
     for img in tqdm(os.listdir(TEST_DIR)):
         path = os.path.join(TEST_DIR, img)
         img_num = img.split('.')[0]
         img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
+        img = cv2.resize(img, (image_size, image_size))
         testing_data.append([np.array(img), img_num])
 
     shuffle(testing_data)
@@ -69,9 +70,14 @@ def process_test_data():
 
 # Run the processing for obtaining the training and the testing data-set
 if __name__ == '__main__':
-    train_data = process_train_data()
-    test_data = process_test_data()
-
+    if len(sys.argv) == 1:
+        train_data = process_train_data()
+        test_data = process_test_data()
+    elif len(sys.argv) == 2:
+        train_data = process_train_data(int(sys.argv[1]))
+        test_data = process_test_data(int(sys.argv[1]))
+    else:
+        print("Invalid arguments input number of process_train_data and process_test_data!\n")
 
 
 

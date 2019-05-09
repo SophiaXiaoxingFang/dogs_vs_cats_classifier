@@ -1,6 +1,7 @@
 import os
 import csv
 import shutil
+from tqdm import tqdm    # for interactive loading
 
 FILE_DIR_DOGS = ".\\result\\dogs"
 FILE_DIR_CATS = ".\\result\\cats"
@@ -17,7 +18,7 @@ if os.path.exists(FILE_DIR_CATS):
 os.makedirs(FILE_DIR_DOGS)
 os.makedirs(FILE_DIR_CATS)
 
-for item in reader:
+for item in tqdm(reader):
     if reader.line_num == 1:
         continue
     if item[1] == '1':
