@@ -9,8 +9,8 @@ from tqdm import tqdm    # for interactive loading
 
 
 # Constant definition: file path, image size
-TRAIN_DIR = '.\\data\\train'
-TEST_DIR = '.\\data\\test'
+TRAIN_DIR = '../data/train'
+TEST_DIR = '../data/test'
 IMG_SIZE = 80
 
 
