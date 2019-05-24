@@ -3,8 +3,8 @@ import csv
 import shutil
 from tqdm import tqdm    # for interactive loading
 
-FILE_DIR_DOGS = ".\\result\\dogs"
-FILE_DIR_CATS = ".\\result\\cats"
+FILE_DIR_DOGS = "/result/dogs"
+FILE_DIR_CATS = "/result/cats"
 
 csvFile = open("submission_file.csv", "r")
 reader = csv.reader(csvFile)
@@ -22,8 +22,8 @@ for item in tqdm(reader):
     if reader.line_num == 1:
         continue
     if item[1] == '1':
-        shutil.copy('.\\data\\test\\{}.jpg'.format(item[0]), FILE_DIR_DOGS)
+        shutil.copy('../data/test/{}.jpg'.format(item[0]), FILE_DIR_DOGS)
     else:
-        shutil.copy('.\\data\\test\\{}.jpg'.format(item[0]), FILE_DIR_CATS)
+        shutil.copy('../data/test/{}.jpg'.format(item[0]), FILE_DIR_CATS)
 
 print("The testing images have been put in corresponding folders.")
