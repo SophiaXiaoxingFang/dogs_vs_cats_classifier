@@ -106,7 +106,7 @@ venv.bak/
 # for this project
 /bak
 /data
-/log/*
+*/log
 /result
 checkpoint
 *.csv
@@ -115,5 +115,5 @@ dogsvscats-*.model.*
 .idea/
 *.h5
 *.json
-keras_data_augmentation/small_data_set
+*/small_data_set
 
