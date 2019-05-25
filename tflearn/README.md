@@ -12,8 +12,6 @@ The function of each Python file is explained as follows:
 ## How to run the code
 **Step 1: Environment setup**
 
-The project should be run using Python interpreter. It has been tested in PyCharm IDE as well as Command Prompt in Windows 10. 
-
 Software/Module needed:
   * Python3
   * OpenCV
@@ -23,9 +21,7 @@ Software/Module needed:
   * TFLearn   
   * tqdm
   
- Clone the files in this repository and unzip them in one folder.    
-
-**Step 2: Pre-process the data-set**
+ **Step 2: Pre-process the data-set**
 
 Run the `preprocessing.py` file. 
 
