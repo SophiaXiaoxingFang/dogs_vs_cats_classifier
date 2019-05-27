@@ -41,7 +41,7 @@ The CNN will be built and trained according to the data-set in the Step 2. When 
 
 When you close the figures, the trained model will be stored as a h5 file in the current folder.
 
-**Step 3: Get the classification results of the testing data-set**
+**Step 4: Get the classification results of the testing data-set**
 
 Run the `testing.py` file. 
 

@@ -4,8 +4,9 @@
 The project is to implement a binary image classifier to tell a picture is Dog or Cat. The origin of this project is from a [Kaggle competition](https://www.kaggle.com/c/dogs-vs-cats) .
 In this repository, different approaches are tried to solve the problem:
 
-  * [TFlearn, basic CNN](./1_tflearn/README.md), a basic approach using `TFlearn` and full data-set. 
-  * [Keras, data augmentation](./2_keras/README.md) , concerning small scale data-set (e.g., for each category, 1000 images for training, 200 images for validation), using data augmentation in `keras.preprocessing.image.ImageDataGenerator` class.
+  * [Basic CNN](./1_tflearn/README.md), a basic approach using `TFlearn` and full data-set. 
+  * [Data Augmentation](./2_keras/README.md) , concerning small scale data-set (e.g., for each category, 1000 images for training, 200 images for validation), using data augmentation in `keras.preprocessing.image.ImageDataGenerator` class.
+  * [Transfer Learning](./3_transfer_learning/README.md) , for improving the accuracy of the classifier, a classifier is built up based on a pre-trained VGG16 network.
 
 Please check out the code and readme file in the corresponding folders.
 
@@ -25,3 +26,5 @@ Download the train.zip and test1.zip files, unzip them, and put the training dat
 https://www.geeksforgeeks.org/image-classifier-using-cnn/
 
 https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
+
+https://towardsdatascience.com/transfer-learning-from-pre-trained-models-f2393f124751
